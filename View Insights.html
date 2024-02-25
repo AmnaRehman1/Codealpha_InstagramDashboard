@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Insights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      color: black;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .navbar {
+      background-color: #37c36f; 
+      padding: 30px ;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-title {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-weight: bold;
+      margin-right: auto;
+    }
+    
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar li {
+      display: inline;
+      margin-right: 20px;
+    }
+    
+    .navbar li:last-child {
+      margin-right: 0;
+    }
+    
+    .navbar a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    footer {
+      background-color: #37c36f; 
+      padding: 20px 0;
+      text-align: center;
+      margin-top: auto;
+      color: white; /* White footer text */
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: calc(100vh - 120px); /* Adjust for navbar and footer heights */
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    
+    .column1 {
+      width: 25%; /* 1/4 width */
+      background-color: #f0f0f0; /* Light grey background */
+      overflow: hidden; /* Hide scrollbars */
+      position: fixed; /* Fixed position */
+      top: 120px; /* Height of navbar */
+      bottom: 32px; /* Height of footer */
+    }
+    
+    .column1 img {
+      width: 100%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+    }
+    
+    .column2 {
+      width: 75%; /* 3/4 width */
+      background-color: #fff; /* White background */
+      overflow-y: auto; /* Enable vertical scrolling */
+      padding: 20px;
+      height: calc(100% - 40px); /* Adjust for padding */
+      margin-left: 25%; /* Move column2 to the right */
+    }
+    
+    .column2 img {
+      width: 100%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="navbar-title">Instagram Dashboard</h1>
+    <ul>
+      <li><a href="https://www.instagram.com/accounts/insights/?timeframe=30">View Insights</a></li>
+      <li><a href="Reels.html">Reels</a></li>
+      <li><a href="Profile.html">Profile</a></li>
+      <li><a href="Contact_Us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="column1">
+      <img src="maininsight.png" alt="Main Insight">
+    </div>
+    <div class="column2">
+      <img src="insight1.png" alt="Insight 1">
+      <img src="insight2.png" alt="Insight 2">
+      <img src="insight3.png" alt="Insight 3">
+      <img src="insight4.png" alt="Insight 4">
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <p>&copy; 2024 | all rights reserved! | Amna Rehman's Dashboard</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="DashStyle.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="navbar-title">Instagram Dashboard</h1>
+    <ul>
+      <li><a href="View Insights.html">View Insights</a></li>
+      <li><a href="Reels.html">Reels</a></li>
+      <li><a href="Profile.html">Profile</a></li>
+      <li><a href="Contact_Us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="carousel">
+        <div class="slide" style="background-image: url('image1.jpg');">
+            <div class="project-info">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('image2.jpg');">
+            <h1></h1>
+            </div>
+        </div>
+        
+        <!-- Add more slides for other projects similarly -->
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+  
+  <footer>
+    <p>&copy; 2024 | all rights reserved! | Amna Rehman's Dashboard</p>
+  </footer>
+</body>
+
+
+
+
+<script>
+let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+            });
+        }
+    </script>
+</html>
